@@ -2,13 +2,14 @@ const fibonacci = function (input) {
 
   // parse to accept strings
   input = parseInt(input);
+  
+  // check for negative numbers
+  if (input < 0) return "OOPS";
+  if (input === 0) return 0;
+
   let n1 = 0,
     n2 = 1,
     finalOutput = 1;
-
-
-  // check for negative numbers
-  if (input < 1) return "OOPS";
 
   // generate fibonacci to specified input length
   for (let i = 1; i < input; i++) {
